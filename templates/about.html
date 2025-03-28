@@ -1,0 +1,144 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-10">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0"><i class="fas fa-info-circle me-2"></i>About the Financial Risk Assessment Platform</h5>
+            </div>
+            <div class="card-body">
+                <h3 class="mb-4">Understanding Investment Risk Analysis</h3>
+                
+                <h5>What is Monte Carlo Simulation?</h5>
+                <p>
+                    Monte Carlo simulation is a mathematical technique that predicts possible outcomes of an uncertain event.
+                    In the context of financial analysis, it runs numerous simulations with random variables to model the 
+                    probability of different outcomes when certain factors are uncertain.
+                </p>
+                
+                <hr class="my-4">
+                
+                <h5>Key Financial Metrics</h5>
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-header bg-light">
+                                <h6 class="mb-0">Net Present Value (NPV)</h6>
+                            </div>
+                            <div class="card-body">
+                                <p>
+                                    NPV is the difference between the present value of cash inflows and outflows over a period of time.
+                                    It's calculated using the formula:
+                                </p>
+                                <div class="bg-light p-3 text-center">
+                                    <p class="mb-0">
+                                        NPV = ∑ (Cash Flow<sub>t</sub> / (1 + r)<sup>t</sup>) - Initial Investment
+                                    </p>
+                                </div>
+                                <p class="mt-3">
+                                    Where:
+                                </p>
+                                <ul>
+                                    <li>t = time period</li>
+                                    <li>r = discount rate</li>
+                                </ul>
+                                <p>
+                                    <span class="badge bg-success">Positive NPV</span> indicates a potentially profitable investment.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-header bg-light">
+                                <h6 class="mb-0">Risk Metrics</h6>
+                            </div>
+                            <div class="card-body">
+                                <dl>
+                                    <dt>Standard Deviation</dt>
+                                    <dd>
+                                        Measures the dispersion of NPV outcomes from the mean. Higher values indicate greater uncertainty.
+                                    </dd>
+                                    
+                                    <dt>Probability of Loss</dt>
+                                    <dd>
+                                        The percentage of simulations resulting in a negative NPV. It represents the likelihood of losing money on the investment.
+                                    </dd>
+                                    
+                                    <dt>Confidence Interval</dt>
+                                    <dd>
+                                        A range that has a 95% probability of containing the true NPV. Wider intervals indicate higher uncertainty.
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <hr class="my-4">
+                
+                <h5>How to Use This Platform</h5>
+                <ol>
+                    <li>
+                        <strong>Enter Investment Parameters:</strong>
+                        <p>
+                            Provide details about your investment, including initial cost, duration, expected revenue and cost ranges,
+                            and your discount rate.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Run the Simulation:</strong>
+                        <p>
+                            The platform will run thousands of Monte Carlo simulations to model possible outcomes based on the ranges you provided.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Analyze Results:</strong>
+                        <p>
+                            Review the summary statistics, probability distributions, and investment recommendations to make informed decisions.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Optional: Use Predictive Analytics:</strong>
+                        <p>
+                            If you have historical revenue data, enter it to enable predictive forecasting of future revenues based on past trends.
+                        </p>
+                    </li>
+                </ol>
+                
+                <hr class="my-4">
+                
+                <h5>Interpreting the Results</h5>
+                <p>
+                    The platform provides a recommendation based on the following criteria:
+                </p>
+                <ul>
+                    <li>
+                        <span class="badge bg-success">High Confidence</span>
+                        Positive expected returns with low risk (probability of loss &lt; 10%).
+                    </li>
+                    <li>
+                        <span class="badge bg-primary">Medium Confidence</span>
+                        Positive expected returns with moderate risk (probability of loss &lt; 25%).
+                    </li>
+                    <li>
+                        <span class="badge bg-warning text-dark">Low Confidence</span>
+                        Positive expected returns but with significant risk.
+                    </li>
+                    <li>
+                        <span class="badge bg-danger">Very Low Confidence</span>
+                        High probability of negative returns. Investment not recommended.
+                    </li>
+                </ul>
+                
+                <div class="alert alert-info mt-4">
+                    <i class="fas fa-lightbulb me-2"></i>
+                    <strong>Remember:</strong> This platform provides analysis based on the inputs and assumptions you provide.
+                    Always consider other qualitative factors and consult with financial advisors for important investment decisions.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
